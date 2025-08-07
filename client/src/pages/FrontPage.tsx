@@ -13,12 +13,12 @@ function FrontPage() {
 
    useEffect(() => {
       
-      //const vanish = async () => {
-         //await new Promise((resolve) => setTimeout(()=>{
+      const vanish = async () => {
+         await new Promise((resolve) => setTimeout(()=>{
             vanishLoader()
-            //return resolve;
-         //}, 4000))
-      //}
+            return resolve;
+         }, 4000))
+      }
 
       //vanish()
    }, [])
