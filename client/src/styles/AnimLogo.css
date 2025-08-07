@@ -1,0 +1,128 @@
+#logoAnim {
+   max-width: 440px;
+   width: 100%;
+   z-index: 1;
+   position: fixed;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+}
+
+.cls-1 {
+   /*4*/
+fill: url(#linear-gradient-2);
+animation: slide-up 1s cubic-bezier(.17,.67,.65,1.16) 1 backwards;
+transform-origin: bottom;
+animation-delay: 0.6s;
+}
+
+.cls-2 {
+   /*2*/
+fill: url(#linear-gradient-4);
+animation: slide-up 1s cubic-bezier(.17,.67,.65,1.16) 1 backwards;
+transform-origin: bottom;
+animation-delay: 0.2s;
+}
+
+.cls-3 {
+   /*3*/
+fill: url(#linear-gradient-3);
+animation: slide-up 1s cubic-bezier(.17,.67,.65,1.16) 1 backwards;
+transform-origin: bottom;
+animation-delay: 0.4s;
+}
+
+.cls-4 {
+   /*1*/
+fill: url(#linear-gradient-5);
+animation: slide-up 1s cubic-bezier(.17,.67,.65,1.16) 1 backwards;
+transform-origin: bottom;
+
+}
+
+.cls-5 {
+   /*5*/
+fill: url(#linear-gradient);
+animation: slide-up 1s cubic-bezier(.17,.67,.65,1.16) 1 backwards;
+transform-origin: bottom;
+animation-delay: 0.8s;
+}
+
+@keyframes slide-up {
+   from{
+      transform: scaleY(0%);
+   }
+   to{
+      transform: scaleY(100%);
+   }
+}
+
+@keyframes text-animation{
+   0%{
+      stroke-dashoffset: 100%;
+   }
+   80%{
+      fill: transparent;
+   }
+   100%{
+      stroke-dashoffset: 0;
+      fill: black;
+   }
+}
+
+path.text {
+   fill: transparent;
+   stroke: black;
+   stroke-width: 0.8;
+   animation: text-animation 4s ease-in-out 1 forwards;
+}
+
+path.text1 {
+   stroke-dasharray: 155;
+   stroke-dashoffset: 155;
+}
+
+path.text2 {
+   stroke-dasharray: 156;
+   stroke-dashoffset: 156;
+}
+
+path.text3 {
+   stroke-dasharray: 181;
+   stroke-dashoffset: 181;
+}
+
+path.text4 {
+   stroke-dasharray: 373;
+   stroke-dashoffset: 373;
+}
+
+path.text5 {
+   stroke-dasharray: 1240;
+   stroke-dashoffset: 1240;
+}
+
+path.text6 {
+   stroke-dasharray: 537;
+   stroke-dashoffset: 537;
+}
+
+path.text7 {
+   stroke-dasharray: 1018;
+   stroke-dashoffset: 1018;
+}
+
+path.text8 {
+   stroke-dasharray: 889;
+   stroke-dashoffset: 889;
+}
+
+path.text9 {
+   stroke-dasharray: 845;
+   stroke-dashoffset: 845;
+}
+
+path.text10 {
+   stroke-dasharray: 687;
+   stroke-dashoffset: 687;
+}

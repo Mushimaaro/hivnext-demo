@@ -1,0 +1,101 @@
+.blob-outer-container {
+   position: fixed;
+   height: 100%;
+   width: 100%;
+   inset: 0;
+   margin: auto;
+   filter: blur(100px);
+   
+}
+
+.blob-inner-container {
+   border-radius: 99999px;
+   position: absolute;
+   inset: 0;
+   margin: auto;
+   width: 100vw;
+   height: 100vh;
+   min-width: auto;
+   overflow: hidden;
+   transform: scale(0.8);
+}
+
+.blobs {
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   inset: 0;
+   margin: 0;
+   background: conic-gradient(from 0deg, #00ADB5, #8c95a5, #00ADB5, #EEEEEE);
+   animation: spinBlob 8s linear infinite;
+}
+
+@keyframes spinBlob {
+   0%{
+      transform: rotate(0deg) scale(2);
+   }
+   100%{
+      transform: rotate(1turn) scale(2);
+   }
+}
+
+@keyframes appearLoader {
+   from {
+      display: none;
+      opacity: 0;
+   }
+   to{
+      display: flex;
+      opacity: 1;
+   }
+}
+
+@keyframes vanishLoader {
+   from {
+      display: flex;
+      opacity: 1;
+   }
+   to{
+      display: none;
+      opacity: 0;
+   }
+}
+
+@keyframes blurText {
+   from {
+      display: block;
+      filter: blur(0px);
+   }
+   to{
+      display: none;
+      filter: blur(15px);
+   }
+}
+
+.bg-back {
+   opacity: 1;
+   display: flex;
+   position: fixed;
+   background: #222831;
+   width: 100vw;
+   height: 100vh;
+   z-index: 100;
+}
+
+.bg-back.vanish {
+   animation: vanishLoader 800ms ease-in-out 1 forwards;
+}
+
+.bg-back.appear {
+   animation: appearLoader 800ms ease-in-out 1 forwards;
+}
+
+.bg-back.vanish #logoAnim {
+   animation: blurText 600ms ease-in-out 1 forwards;
+}
+
+@media screen and (min-width: 0px) and (max-width:896px) {
+   #logoAnim {
+      width: 80%;
+   }
+}

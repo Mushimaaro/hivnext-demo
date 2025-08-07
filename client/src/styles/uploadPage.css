@@ -1,0 +1,194 @@
+.upload-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   width: 100%;
+   margin-top: 20px;
+}
+
+.upload-container >  p {
+   margin-top: 12px;
+   width: 100%;
+   max-width: 800px;
+}
+
+.upload-container .uploaded-file-details{
+   opacity: 0;
+   width: 100%;
+   max-width: 800px;
+   height: auto;
+   margin-top: 24px;
+   border-radius: 10px;
+   padding: 16px;
+   background: var(--color-background-variant);
+   display: none;
+   grid-template-columns: 56px auto;
+   grid-template-rows: 56px auto auto;
+   grid-template-areas: 
+   "excel-icon info"
+   "bar bar"
+   "upload upload";
+   animation: fadeOutDown 300ms ease-in-out forwards;
+}
+
+.upload-container .uploaded-file-details.open{
+   display: grid;
+   opacity: 1;
+   animation: fadeInDown 300ms ease-in-out forwards;
+}
+
+.uploaded-file-details .excel-icon {
+   padding: 8px;
+   background-color: var(--color-white);
+   border-radius: 8px;
+   height: 46px;
+   width: 46px;
+   border-color: rgba(128, 128, 128, 0.301);
+   border-style: solid;
+   border-width: 1px;
+   margin: 5px;
+   grid-area: excel-icon;
+}
+
+.uploaded-file-details .excel-icon img {
+   width: 30px;
+}
+
+.uploaded-file-details .info span {
+   color: var(--text-color);
+}
+
+.uploaded-file-details .info{
+   width: 100%;
+   padding: 8px;
+   height: 56px;
+   position: relative;
+   grid-area: info;
+}
+
+.uploaded-file-details .bar {
+   grid-area: bar;
+   opacity: 0;
+   transition: opacity 100ms ease-in-out;
+}
+
+.uploaded-file-details .bar.show {
+   opacity: 1;
+}
+
+.uploaded-file-details .upload-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 8px;
+   width: 100%;
+   grid-area: upload;
+}
+
+.uploaded-file-details .info .close {
+   position:absolute;
+   top: 0;
+   right: 0;
+   font-size: 16px;
+   color: var(--text-color)
+}
+
+.dropzone-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 300px;
+   width: 100%;
+   max-width: 800px;
+   background-image: var(--dashed-image);
+   border-radius: 10px;
+   background-color: var(--color-background-variant);
+   transition: all 250ms ease-in-out;
+}
+
+.dropzone-container.drag-color {
+   background-color: rgba(176, 225, 248, 0.301);
+   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%232ec4f1ff' stroke-width='3' stroke-dasharray='8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");;
+}
+
+.dropzone-container p {
+   font-size: 14px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+@keyframes fadeInDown {
+   0% {
+      opacity: 0;
+      display: none;
+      transform: translateY(-20px);
+   }
+   100% {
+      opacity: 1;
+      display: grid;
+      transform: translateY(0);
+   }
+}
+
+@keyframes fadeOutDown {
+   0% {
+      opacity: 1;
+      display: grid;
+      transform: translateY(0);
+   }
+   100% {
+      opacity: 0;
+      display: none;
+      transform: translateY(20px);
+   }
+}
+
+.upload-button button {
+  appearance: none;
+  background-color: var(--color-background-variant);
+  border: 1px solid rgba(153, 153, 153, 0.301);
+  border-radius: 8px;
+  box-shadow:
+    rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: var(--text-color);
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 5px 15px 5px 15px;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.upload-button button:hover {
+  background-color: var(--color-dark-variant);
+  color: var(--text-color-inverted);
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.upload-button button:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.upload-button button:focus {
+  outline: 1px transparent;
+}
+
+.upload-button button:before {
+  display: none;
+}
+
+.upload-button button:-webkit-details-marker {
+  display: none;
+}
