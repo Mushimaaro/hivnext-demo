@@ -121,6 +121,8 @@ const ProtectedRoute = ({children, allowedRoles}: Props) => {
 
    },[isLoading, navigate])
 
+   useEffect(()=>{},[returnType])
+
 
    /*
    returnType value
