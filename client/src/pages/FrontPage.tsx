@@ -15,7 +15,7 @@ function FrontPage() {
       
       //const vanish = async () => {
          //await new Promise((resolve) => setTimeout(()=>{
-            //vanishLoader()
+            vanishLoader()
             //return resolve;
          //}, 4000))
       //}
