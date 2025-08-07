@@ -1,7 +1,5 @@
 import "../styles/settingPage.css"
-import { useEffect, useRef, useState } from "react";
-import useAxiosPrivate from "../hooks/useAxiosPrivate";
-
+import { useEffect, useRef } from "react";
 
 function SettingPage() {
    const inputsRef = useRef<HTMLInputElement>(null);
