@@ -654,6 +654,9 @@
    .front-inner-container .form-box form .input-box {
       margin: 12px 0;
    }
+   .front-inner-container .form-box form .forgot-link {
+      margin-top: 12px;
+   }
 }
 
 @keyframes fade-in {
