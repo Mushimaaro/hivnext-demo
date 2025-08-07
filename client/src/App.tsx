@@ -20,6 +20,7 @@ import ResetPasswordPage from './pages/ResetPasswordPage.tsx'
 import ProtectedRoute from './routes/ProtectedRoute.tsx'
 import PresistLogin from './components/PersistLogin.tsx'
 import LoaderPage from './pages/LoaderPage.tsx'
+import useLoading from './hooks/useLoading.tsx'
 import SettingPage from './pages/SettingPage.tsx'
 import { Toaster } from 'sonner'
 
@@ -95,6 +96,18 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const { vanishLoader} = useLoading()
+
+  useEffect(() => {
+    const vanish = async () => {
+        await new Promise((resolve) => setTimeout(()=>{
+          vanishLoader()
+          return resolve;
+        }, 4000))
+    }
+
+    vanish()
+  }, [])
 
   useEffect(() => {
     keepTheme()
