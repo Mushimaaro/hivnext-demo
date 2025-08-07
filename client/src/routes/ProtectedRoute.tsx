@@ -60,8 +60,10 @@ const ProtectedRoute = ({children, allowedRoles}: Props) => {
                if(auth === null){
                   if(location.pathname === "/")
                      setReturnType(1)
-                  else
+                  else{
+                     setReturnType(1)
                      navigate('/', {replace: true});
+                  }
                }else if(location.pathname === "/"){
                   if(auth?.userInfo?.verified && isLogin){
                      console.log("Redirect to home page")
