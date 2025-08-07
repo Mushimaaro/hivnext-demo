@@ -45,7 +45,7 @@ function ResetPasswordPage() {
             <ResetPassword/>
             <div className="toggle-box">
                <div className="toggle-panel toggle-left">
-                  <img src="./src/assets/HIVnext.svg" alt="HIVnext" />
+                  <img src="https://olive-odella-90.tiiny.site/HIVnext.svg" alt="HIVnext" />
                   <small>Health Information Vault for Differentiated HIV Services</small>
                   <h1>Hello, welcome!</h1>
                   <p style={{marginBottom: '0px'}}>Have questions regarding your account?</p>
