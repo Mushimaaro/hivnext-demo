@@ -12,15 +12,15 @@ function FrontPage() {
    }
 
    useEffect(() => {
-      console.log("test")
-      const vanish = async () => {
-         await new Promise((resolve) => setTimeout(()=>{
-            vanishLoader()
-            return resolve;
-         }, 4000))
-      }
+      
+      //const vanish = async () => {
+         //await new Promise((resolve) => setTimeout(()=>{
+            //vanishLoader()
+            //return resolve;
+         //}, 4000))
+      //}
 
-      vanish()
+      //vanish()
    }, [])
 
    return (
