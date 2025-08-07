@@ -61,8 +61,6 @@ const ProtectedRoute = ({children, allowedRoles}: Props) => {
             } catch (error) {
                console.error(error)
             } finally {
-               setIsLoading(false)
-
                if(!isLoading){
                   if(location.pathname === "/"){
                      if(auth?.userInfo?.verified && isLogin){
@@ -107,6 +105,7 @@ const ProtectedRoute = ({children, allowedRoles}: Props) => {
                      setReturnType(2)
                   }
                }
+               setIsLoading(false)
             }
          }
 
