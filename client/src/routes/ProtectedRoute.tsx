@@ -127,15 +127,15 @@ const ProtectedRoute = ({children, allowedRoles}: Props) => {
 
 
 
-   if(returnType === 0){
-      return <></>
-   }else if(returnType === 1){
+   //if(returnType === 0){
+   //   return <></>
+   //}else if(returnType === 1){
       return <>{children}</>
-   }else if(returnType == 2){
-      return <UnauthorizedPage/>
-   }else{
-      return <></>
-   }
+   //}else if(returnType == 2){
+   //   return <UnauthorizedPage/>
+   //}else{
+   //   return <></>
+   //}
 }
 
 export default ProtectedRoute
