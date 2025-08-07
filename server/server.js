@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 
 // Cors
 const corsOptions = {
-   origin: ['http://localhost:5173/', 'http://localhost:5173', 'http://127.0.0.1:5173/', 'http://127.0.0.1:5173'],
+   origin: ['https://hivnextdemo.onrender.com'],
    credentials: true,
    optionsSuccessStatus: 200,
    allowedHeaders:  ['Content-Type', 'Authorization']
