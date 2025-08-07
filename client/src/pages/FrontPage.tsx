@@ -20,7 +20,7 @@ function FrontPage() {
          }, 4000))
       }
 
-      //vanish()
+      vanish()
    }, [])
 
    return (
