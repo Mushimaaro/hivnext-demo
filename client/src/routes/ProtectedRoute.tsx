@@ -18,7 +18,7 @@ type Props = {
 const ProtectedRoute = ({children, allowedRoles}: Props) => {
    const location = useLocation();
    const navigate = useNavigate();
-   const [returnType, setReturnType] = useState(0);
+   const [returnType, setReturnType] = useState(1);
    const {auth, setAuth, isLogin, setIsLogin} = useAuth();
    const {role, setRole} = useRole();
    const isAuth = useIsAuth();
