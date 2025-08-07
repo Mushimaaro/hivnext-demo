@@ -12,6 +12,7 @@ function FrontPage() {
    }
 
    useEffect(() => {
+      console.log("test")
       const vanish = async () => {
          await new Promise((resolve) => setTimeout(()=>{
             vanishLoader()
@@ -20,7 +21,6 @@ function FrontPage() {
       }
 
       vanish()
-      console.log("test")
    }, [])
 
    return (
