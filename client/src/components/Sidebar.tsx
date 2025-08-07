@@ -55,7 +55,7 @@ const Sidebar = () => {
       <aside className="sidebar">
          <div className="top">
             <div className="logo">
-               <img src="../src/assets/HIVnext.svg" alt="HIVnext" />
+               <img src="https://olive-odella-90.tiiny.site/HIVnext.svg" alt="HIVnext" />
             </div>
             <div className="close" id="close-btn" onClick={() => closeMenu()}>
                <RiCloseFill className="close-icon"/>
