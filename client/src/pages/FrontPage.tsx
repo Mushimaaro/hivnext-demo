@@ -20,6 +20,7 @@ function FrontPage() {
       }
 
       vanish()
+      console.log("test")
    }, [])
 
    return (
