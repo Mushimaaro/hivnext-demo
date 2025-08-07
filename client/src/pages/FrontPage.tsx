@@ -33,14 +33,14 @@ function FrontPage() {
             <Register/>
             <div className="toggle-box">
                <div className="toggle-panel toggle-left">
-                  <img src="./src/assets/HIVnext.svg" alt="HIVnext" />
+                  <img src="https://olive-odella-90.tiiny.site/HIVnext.svg" alt="HIVnext" />
                   <small>Health Information Vault for Differentiated HIV Services</small>
                   <h1>Hello, welcome!</h1>
                   <p>Don't have an account?</p>
                   <button className="btn register-btn" onClick={()=>toggleActive()}>Register</button>
                </div>
                <div className="toggle-panel toggle-right">
-                  <img src="./src/assets/HIVnext.svg" alt="HIVnext" />
+                  <img src="https://olive-odella-90.tiiny.site/HIVnext.svg" alt="HIVnext" />
                   <small>Health Information Vault for Differentiated HIV Services</small>
                   <p>Already have an account?</p>
                   <button className="btn login-btn" onClick={()=>toggleActive()}>Login</button>
