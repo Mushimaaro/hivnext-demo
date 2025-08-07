@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import useAuth from '../hooks/useAuth'
 import useRole from '../hooks/useRole'
-import UnauthorizedPage from '../pages/UnauthorizedPage'
+//import UnauthorizedPage from '../pages/UnauthorizedPage'
 import { jwtDecode, type JwtPayload } from 'jwt-decode'
 import type { AccessTokenProfile, UserInfoProfile, UserProfileToken } from '../models/UserModel'
 import { useEffect, useRef, useState} from 'react'
@@ -112,6 +112,7 @@ const ProtectedRoute = ({children, allowedRoles}: Props) => {
       }
 
       return () => {
+         console.log(returnType);
          ranEffect.current = true;
       }
 
