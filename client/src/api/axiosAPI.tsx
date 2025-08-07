@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const backendURL = "http://localhost:5000/"
+const backendURL = "https://hivnext-demo.onrender.com/"
 const baseURL = backendURL + "api/";
 
 export const normalAxios = axios.create({
